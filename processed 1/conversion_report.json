@@ -1,0 +1,20 @@
+{
+  "project": "GSE243292 Alzheimer's disease snRNA-seq",
+  "input_file": "D:\\nsg consultaion\\data\\raw\\GSE243292\\GSE243292_ADsnRNAseq_GEO.h5ad",
+  "output_directory": "D:\\nsg consultaion\\data\\processed",
+  "cells": 122606,
+  "genes": 26423,
+  "matrix_source": "X",
+  "exported_rows_genes": 26423,
+  "exported_columns_cells": 122606,
+  "sparse": true,
+  "nonzero_entries": 138925244,
+  "gene_name_source": "var_names",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "anndata_version": "0.12.19",
+  "numpy_version": "2.3.4",
+  "pandas_version": "2.3.3",
+  "scipy_version": "1.16.3",
+  "analysis_note": "Python is used only for conversion/preprocessing. Main biological analysis is performed in R using Seurat."
+}
