@@ -1,0 +1,27 @@
+# Large raw datasets
+data/raw/**/*.h5ad
+data/raw/**/*.h5seurat
+
+# Large processed Seurat objects
+data/processed/**/*.rds
+
+# Large expression matrices
+data/processed/**/*.mtx
+data/processed/**/*.mtx.gz
+
+# Large intermediate files
+*.RData
+*.rda
+
+# R temporary files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Temporary/log files
+*.tmp
+*.log
+
+# Windows files
+Thumbs.db
+Desktop.ini
