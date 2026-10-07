@@ -193,9 +193,6 @@ GSE243292-snRNAseq/
 │   ├── pathway_enrichment/
 │   ├── trajectory/
 │   └── CellChat/
-│
-└── data/
-    └── README.md
 ```
 **Note:** Analysis outputs are organized into dedicated subdirectories within `results/` and `figures/` for better accessibility and reproducibility. Trajectory-related results, including pseudotime analysis and significant trajectory-associated genes, are stored under `results/trajectory/`, with corresponding visualizations under `figures/trajectory/`. CellChat summary results are maintained under `results/CellChat/`, while communication network visualizations are stored under `figures/CellChat/`. Large processed Seurat and CellChat `.rds` objects are stored externally on Google Drive due to their file size. Marker gene tables, cell-type composition results, differential expression results, and pathway enrichment outputs are organized into their respective directories.
 ## Data
