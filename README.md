@@ -153,26 +153,84 @@ CellChat results are stored under `data/processed/CellChat/`, with figures under
 ## Project Structure
 
 ```text
-GSE243292\_snRNAseq/
+GSE243292-snRNAseq/
+│
 ├── README.md
-├── sn\_RNA\_Alzhimer.R
-├── data/
-│   └── processed/
-│       └── CellChat/
-├── results/
-│   ├── pseudobulk\_DE/
-│   ├── pathway\_enrichment/
-│   └── *.csv                  (trajectory & marker tables saved flat here)
+├── biological_interpretation.md
+├── .gitignore
+│
+├── python/
+│   └── 01_convert_h5ad.py
+│
+├── R/
+│   └── sn_RNA_Alzhimer.R
+│
+├── metadata/
+│   ├── sample_metadata.csv
+│   ├── cell_metadata.tsv
+│   ├── gene_metadata.tsv
+│   └── GEO_sample_metadata/
+│       ├── GSM7782916
+│       ├── GSM7782917
+│       ├── GSM7782918
+│       ├── ...
+│       └── GSM7782930
+│
 ├── figures/
-│   ├── pseudobulk\_DE/
-│   ├── pathway\_enrichment/
+│   ├── QC/
+│   ├── PCA/
+│   ├── UMAP/
+│   ├── annotation/
+│   ├── disease/
 │   ├── CellChat/
-│   └── *.png / *.pdf          (QC, UMAP, marker, and trajectory plots saved flat here)
-└── documentation/
-    └── biological\_interpretation.md
+│   └── trajectory/
+│
+├── results/
+│   ├── marker_genes/
+│   ├── cell_composition/
+│   ├── differential_expression/
+│   ├── pseudobulk_DE/
+│   ├── pathway_enrichment/
+│   ├── trajectory/
+│   └── CellChat/
+│
+└── data/
+    └── README.md
 ```
+**Note:** Analysis outputs are organized into dedicated subdirectories within `results/` and `figures/` for better accessibility and reproducibility. Trajectory-related results, including pseudotime analysis and significant trajectory-associated genes, are stored under `results/trajectory/`, with corresponding visualizations under `figures/trajectory/`. CellChat summary results are maintained under `results/CellChat/`, while communication network visualizations are stored under `figures/CellChat/`. Large processed Seurat and CellChat `.rds` objects are stored externally on Google Drive due to their file size. Marker gene tables, cell-type composition results, differential expression results, and pathway enrichment outputs are organized into their respective directories.
+## Data
 
-> **Note:** trajectory outputs (e.g. `OPC_Oligodendrocyte_pseudotime.png`, `significant_trajectory_genes.csv`) and most marker/composition tables are written directly into `figures/` and `results/` rather than into dedicated `trajectory/` subfolders — there is no `results/trajectory/`, `results/CellChat/`, or `figures/trajectory/` directory created by the script. CellChat is the exception: its processed `.rds` objects live under `data/processed/CellChat/` and its figures under `figures/CellChat/`.
+This project uses the Alzheimer's disease single-nucleus RNA-seq
+dataset GSE243292.
+
+Due to the large size of the raw, converted, and processed
+single-cell datasets, these files are not stored directly in
+this GitHub repository.
+
+### Dataset
+
+GEO accession:
+
+GSE243292
+
+### Data files
+
+The following large files are stored externally:
+
+- GSE243292_ADsnRNAseq_GEO.h5ad
+- GSE243292_ADsnRNAseq_GEO.h5seurat
+- Processed Seurat objects (.rds)
+- Large processed expression matrices
+- Large CellChat/intermediate analysis objects
+
+### Download
+
+Large processed files:
+
+[Google Drive – GSE243292 processed data](YOUR_GOOGLE_DRIVE_LINK)
+
+After downloading, place the files according to the directory
+structure used by the analysis scripts.
 
 ## Major Outputs
 
