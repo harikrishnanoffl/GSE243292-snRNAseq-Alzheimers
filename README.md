@@ -224,7 +224,7 @@ The following large files are stored externally:
 
 Large processed files:
 
-[Google Drive – GSE243292 processed data](YOUR_GOOGLE_DRIVE_LINK)
+[Google Drive – GSE243292 processed data]([YOUR_GOOGLE_DRIVE_LINK](https://drive.google.com/drive/folders/16jRuk9QApE5ozmVHT50An3NH_HkAaJHH?usp=drive_link)
 
 After downloading, place the files according to the directory
 structure used by the analysis scripts.
